@@ -1,6 +1,38 @@
-@main("Play 2.0 Form Example") {
-    
-    <h1>Play 2.0 Form Example</h1>
-    <p>Click <a href="@routes.Application.thingList()">here</a> to see a list of things for create some new ones</p>
-
+@main("Things") {
+    <div id="header"></div>
+    <div id="thingslist"></div>
+    <!-- underscore.js templates -->
+    <script type="text/template" id="header-template">
+      <div>
+        <button id="newThing" value="new">New</button>
+        <button id="sortId" value="new">Sort by ID</button>
+        <button id="sortName" value="new">Sort by Name</button>
+      </div>
+    </script>
+    <script type="text/template" id="create-template">
+      <li>
+        <button id="newThing" value="new">New</button>
+      </li>
+    </script>    
+    <script type="text/template" id="thingslist-template">
+        <div class="view">
+          <span class="id">
+            <%- id %>
+          </span>
+          <span class="name">
+              <%- name %>
+          </span>
+        </div>
+        <div class="edit">
+          <span class="id">
+            <%- id %>
+          </span>
+          <span class="name">
+            <input type="text" class="editinput" value="<%= name %>" />
+          </span>
+        </div>
+        <a class="destroy"></a>
+    </script>
+    <!-- main.js which builds the client side app -->
+    <script src="@routes.Assets.at("javascripts/main.js")" type="text/javascript"> </script>
 }

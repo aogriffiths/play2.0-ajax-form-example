@@ -6,6 +6,8 @@
 create table thing (
   id                        bigint not null,
   name                      varchar(255),
+  cretime                   timestamp not null,
+  updtime                   timestamp not null,
   constraint pk_thing primary key (id))
 ;
 

@@ -5,16 +5,12 @@
 # Home page
 GET     /                           controllers.Application.index()
 
-#AJAX Methods
-POST    /thingCreate                controllers.Application.thingCreate()
-
-GET     /thingList                  controllers.Application.thingList()
-GET     /thingNew 					controllers.Application.thingNew()
-GET     /thingView/:id 		   	    controllers.Application.thingView(id: Long)
-GET     /thingEdit/:id 				controllers.Application.thingEdit(id: Long)
- 
-POST    /thingUpdate/:id            controllers.Application.thingUpdate(id: Long)
-POST    /thingDelete/:id            controllers.Application.thingDelete(id: Long)
+#AJAX Methods in the standard form the backbone.js expects
+GET     /thing                      controllers.Application.thingList()
+GET     /thing/:id                  controllers.Application.thingItem(id: Long)
+POST    /thing                      controllers.Application.thingCreate()
+PUT     /thing/:id                  controllers.Application.thingUpdate(id: Long)
+DELETE  /thing/:id                  controllers.Application.thingDelete(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

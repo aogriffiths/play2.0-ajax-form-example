@@ -1,5 +1,5 @@
-Forms Using Play 2.0
-====================
+Ajax Forms Using Play 2.0
+=========================
 
 Prerequisites
 ------------
@@ -12,6 +12,13 @@ To run it, simply do a "git clone", cd to the project directory, then "play run"
 The Code
 --------
 
+
+
+
+
+
+
+-----------------------
 The first thing to say is this app is not made to look good! The UI is  simple and 
 dull. The real purpose is to demostrate the code, which is well commented. Below is a quick
 overview of how it hangs together and you can click the links to read the comments inline
